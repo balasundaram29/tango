@@ -1,0 +1,20 @@
+{% extends 'rango/base.html' %}
+{% load static %}
+{% block title %}{{ category_name }}{% endblock %}
+{% block body_block %}
+<div class="hero-unit">
+      <h1>Login to Rango</h1>
+      <div class="container">
+      <form id="login_form" class="form-signin span4" method="post" action="/rango/login/">
+        <h2 class="form-signin heading">Please  sign in</h2>
+        {%csrf_token %}
+        Username: <input type="text" class="input-block-level" name="username"  value="" size="50" />
+        <br />
+        Password: <input type="password" class="input-block-level" name="password" value="" size="50" />
+        <br />
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+      </div>
+      </body>
+</div>
+{% endblock %}

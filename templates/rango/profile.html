@@ -1,0 +1,11 @@
+{% extends 'rango/base.html' %}
+{% block title %}Profile {% endblock %}
+{%block body_block %}
+<h4>Profile</h4>
+<div class="hero-unit">
+Name : {{ user.username }} <br />
+Email : {{ user.email }} <br />
+Website : {{ profile.website }} <br />
+Image  : <img src="{{ profile.picture.url }}" />
+</div>
+{% endblock %}

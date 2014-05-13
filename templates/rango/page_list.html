@@ -1,0 +1,11 @@
+
+{% if pages %}
+        <ul>
+           {% for page in pages %}
+           <li><a href="/rango/goto/?page_id={{page.id}}">{{ page.title }}</a> {{page.views}} Views</li>
+
+           {% endfor %}
+        </ul>
+        {% else %}
+            No page currently exists for this category
+        {% endif %}
